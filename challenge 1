@@ -1,0 +1,44 @@
+/*****************************
+* CODING CHALLENGE 1
+*/
+
+/*
+John and Mike both play basketball in different teams. In the latest 3 games, John's team scored 89, 120 and 103 points, while Mike's team scored 116, 94 and 123 points.
+1. Calculate the average score for each team
+2. Decide which teams wins in average (highest average score), and print the winner to the console. Also include the average score in the output.
+3. Then change the scores to show different winners. Don't forget to take into account there might be a draw (the same average score)
+4. EXTRA: Mary also plays basketball, and her team scored 97, 134 and 105 points. Like before, log the average winner to the console. HINT: you will need the && operator to take the decision. If you can't solve this one, just watch the solution, it's no problem :)
+5. Like before, change the scores to generate different winners, keeping in mind there might be draws.
+*/
+
+let johnAVG, maryAVG, mikeAVG;
+
+johnAVG = 5;
+mikeAVG = 5;
+maryAVG = 3;
+
+if (johnAVG > mikeAVG && johnAVG > maryAVG || johnAVG === mikeAVG || johnAVG === maryAVG ) {  
+    if ( johnAVG === mikeAVG ) {
+        console.log('It\'s a draw between john\'s team and mike\'s team  with a score of: ' + mikeAVG)
+    } else if (johnAVG === maryAVG) {
+        console.log('It\'s a draw between john\'s team and mary\'s team  with a score of: ' + johnAVG)
+    } else
+    console.log('The winner is John\'s team with a score: ' + johnAVG );
+
+} else if (mikeAVG > johnAVG && mikeAVG > maryAVG ||johnAVG === mikeAVG || johnAVG === maryAVG ) {
+    if ( johnAVG === mikeAVG ) {
+        console.log('It\'s a draw between mike\'s team and john\'s team  with a score of: ' + mikeAVG)
+    } else if (johnAVG === maryAVG) {
+        console.log('It\'s a draw between mikes\'s team and mary\'s team  with a score of: ' + maryAVG)
+    } else
+     console.log('The winner is mike\'s team with a score: ' + mikeAVG); 
+
+} else if (maryAVG > johnAVG && maryAVG > mikeAVG || maryAVG === mikeAVG || johnAVG === maryAVG ) {
+    if ( maryAVG === mikeAVG ) {
+        console.log('It\'s a draw between mary\'s team and mike\'s team  with a score of: ' + maryAVG);
+    } else if (johnAVG === maryAVG) {
+        console.log('It\'s a draw between mary\'s team and john\'s team with a score of: ' + johnAVG);
+    } else
+    console.log('The winner is mary\'s team with a score: ' + maryAVG);
+} else 
+console.log('It\'s a draw between all teams with a score of: ' + johnAVG );
